@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.3.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gxN-4y-AZY">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="aEd-dF-Jhl">
+            <objects>
+                <viewController id="gxN-4y-AZY" customClass="ViewController" customModule="ARKitWorkingWithWorldMapData" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KlG-Ce-ium">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nkh-V8-3yl">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Move camera around to detect planes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dTS-hu-3GP">
+                                <rect key="frame" x="0.0" y="579" width="375" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="NPa-b8-yQe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.89999997615814209" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ofq-C2-cVQ">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Load" id="Lb7-KS-YMZ">
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="loadBarButtonItemDidTouch:" destination="gxN-4y-AZY" id="6QR-VF-R3r"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="HxX-W6-6oc"/>
+                                    <barButtonItem systemItem="refresh" id="Xpg-MU-VS6">
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="resetBarButtonItemDidTouch:" destination="gxN-4y-AZY" id="t5g-02-yjO"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="sU7-vt-MiG"/>
+                                    <barButtonItem systemItem="save" id="W7w-6o-g1T">
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="saveBarButtonItemDidTouch:" destination="gxN-4y-AZY" id="7kp-kp-cNT"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="nkh-V8-3yl" secondAttribute="bottom" id="7wD-By-sK2"/>
+                            <constraint firstAttribute="trailing" secondItem="ofq-C2-cVQ" secondAttribute="trailing" id="F09-c5-YKK"/>
+                            <constraint firstItem="nkh-V8-3yl" firstAttribute="leading" secondItem="KlG-Ce-ium" secondAttribute="leading" id="K1E-jc-HZI"/>
+                            <constraint firstAttribute="trailing" secondItem="nkh-V8-3yl" secondAttribute="trailing" id="NE7-E9-d17"/>
+                            <constraint firstAttribute="trailing" secondItem="dTS-hu-3GP" secondAttribute="trailing" id="VD2-QP-jc0"/>
+                            <constraint firstItem="dTS-hu-3GP" firstAttribute="leading" secondItem="KlG-Ce-ium" secondAttribute="leading" id="VFX-Zb-2JO"/>
+                            <constraint firstItem="ofq-C2-cVQ" firstAttribute="top" secondItem="dTS-hu-3GP" secondAttribute="bottom" id="aWS-H8-cix"/>
+                            <constraint firstItem="nkh-V8-3yl" firstAttribute="top" secondItem="KlG-Ce-ium" secondAttribute="top" id="iBp-i6-uDo"/>
+                            <constraint firstItem="ofq-C2-cVQ" firstAttribute="bottom" secondItem="8yC-7C-We2" secondAttribute="bottom" id="idK-7V-UN1"/>
+                            <constraint firstItem="ofq-C2-cVQ" firstAttribute="leading" secondItem="KlG-Ce-ium" secondAttribute="leading" id="tv5-XC-K1q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8yC-7C-We2"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="dTS-hu-3GP" id="AbK-Em-W6Q"/>
+                        <outlet property="sceneView" destination="nkh-V8-3yl" id="f1s-Ya-hj0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eyl-bd-Jl9" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
